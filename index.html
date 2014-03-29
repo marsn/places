@@ -7,22 +7,18 @@
     <title>Places locator</title>
 </head>
 <body>
-
 <header>
     <h2>Places locator <a href="https://developers.google.com/places/">
         <img src="img/google.png"></a>
     </h2>
 </header>
-
 <form class="form">
-
     <p class="location">
         <input type="search" name="location" onsearch ="OnSearch(this)" id="location" placeholder="Type in a place name"
                onkeypress="if (event.keyCode==13){ initialize();event.preventDefault()}"
                 />
         <label for="location"></label>
     </p>
-
     <p class="view">
         <select id="view" onchange="initialize()">
             <option value="List">List</option>
@@ -30,27 +26,21 @@
         </select>
         <label for="view">View</label>
     </p>
-
     <p class="submit">
         <input type="button" onclick="initialize()" value="Find"/>
     </p>
-
     <p class="submit">
         <input type="button" id="more" value="More results"/>
     </p>
-
 </form>
-
 <div id="map-canvas"></div>
 <div id="list-canvas">
     <div id="empty"><img src="img/city.png"></div>
     <ul id="places"></ul>
 </div>
-
 <footer>
     (c) <a href="mailto:marsel.novy@gmail.com">Marsel Novy</a>, 2013
 </footer>
-
 </body>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
 <script src="js/script.js"></script>
