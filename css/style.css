@@ -1,0 +1,157 @@
+/*
+    Theme Name: Google Map places locator
+    Created with JetBrains PhpStorm.
+	Date: 17 May 2013
+	Version: 1.01
+	Author: Marsel Novy <marsel.novy@gmail.com>
+*/
+
+/* ===========================
+   ======= Body style ========
+   =========================== */
+
+body, html {
+    padding: 60px 130px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #777777;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #474E69;
+}
+
+#empty {
+    margin: -5px 0 0 -5px;
+    display: block;
+}
+
+@media print {
+    html, body {
+        height: auto;
+    }
+
+    #map-canvas, #map_canvas {
+        height: 450px;
+    }
+}
+
+/* ===========================
+   ======= Search Form =======
+   =========================== */
+
+input, select {
+    padding: 10px;
+    border: 1px solid #E5E5E5;
+    width: 300px;
+    color: #999999;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+.form label {
+    font-size: 13px;
+    margin-left: 10px;
+    color: #999999;
+}
+
+input:hover, input:focus, select:hover, select:focus {
+    border-color: #C9C9C9;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    outline: -webkit-focus-ring-color auto 0px;
+    outline-offset: -2px;
+}
+
+/* ===========================
+   ===== Results Output=======
+   =========================== */
+
+#list-canvas, #map-canvas {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 630px;
+    height: 390px;
+    width: 500px;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+/* ===========================
+   ====== Select Button ======
+   =========================== */
+
+select {
+    width: 100px;
+    padding-left: 30px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+/* ===========================
+   ====== Find Button ======
+   =========================== */
+
+.submit input {
+    width: 100px;
+    height: 40px;
+    background-color: #474E69;
+    color: #FFF;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.submit input#more {
+    background-color: #999999;
+    display: none;
+}
+
+/* ===========================
+   ======== List View ========
+   =========================== */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0px;
+    height: 390px;
+    width: 500px;
+    overflow-y: auto;
+}
+
+li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+li:nth-child(odd) {
+    background-color: #fcfcfc;
+}
+
+footer {
+    font-size: 13px;
+    display: block;
+    position: absolute;
+    color: #999999;
+    top: 480px;
+}
